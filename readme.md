@@ -30,16 +30,26 @@ flask --app run run --debug
 
 ## Example
 ```py
-    from server.scrapper import get_players
+from server.scrapper import get_clasification
 
-    print(get_players())
-    
-    # Output: {
-        'name': 'Ronald Araújo', 
-        'number': '4', 
-        'position': 'Defender', 
-        'img_url': 'https://www.fcbarcelona.com/photo-resources/2022/11/02/04daeacd-0023-4927-a9df-417a942806ba/04-RONALD_ARAUJO_.jpg?width=470&height=470'
-    }
+print(get_clasification())
+
+# Output: {
+    'position': '1', 
+    'team': 'FC Barcelona', 
+    'team_logo': 'resources.fcbarcelona.pulselive.com/badges/club/40/BCN.png;', 
+    'points': '62', 
+    'matches_played': '24', 
+    'wins': '20', 
+    'draws': '2', 
+    'losses': '2', 
+    'goals_for': '46', 
+    'goals_against': '8', 
+    'goals_difference': '38', 
+    'last_results': ['W', 'W', 'W', 'L', 'W'], 
+    'next_match': 'Athletic Club', 
+    'next_match_logo': 'resources.fcbarcelona.pulselive.com/badges/club/30/ATH.png;'
+}
 ```
 ## License
 

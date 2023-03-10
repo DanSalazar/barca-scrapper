@@ -22,12 +22,6 @@ cd barca-scrapper
 pip install -r requirements.txt 
 python run.py
 ```
-For production environments...
-
-```sh
-flask --app run run --debug
-```
-
 ## Example
 ```py
 from server.scrapper import get_clasification

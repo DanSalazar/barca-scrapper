@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup, Tag
 
 urls = {
-	"players": "https://www.fcbarcelona.es/en/futbol/primer-equipo/jugadores",
-	"results": "https://www.fcbarcelona.es/en/futbol/primer-equipo/resultados",
-	"clasification": "https://www.fcbarcelona.es/en/futbol/primer-equipo/clasificacion",
+	"players": "https://www.fcbarcelona.com/en/football/first-team/players",
+	"results": "https://www.fcbarcelona.com/en/football/first-team/results",
+	"clasification": "https://www.fcbarcelona.com/en/football/first-team/standings",
 	"schedule": "https://www.fcbarcelona.com/en/football/first-team/schedule",
 }
 

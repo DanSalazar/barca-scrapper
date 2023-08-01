@@ -1,23 +1,24 @@
-from flask import Flask, jsonify, request
-from .scrapper import get_players, get_clasification, get_results, get_schedule
+from flask import Flask
+from flask_restful import Api
+from .api import bp
 
 def create_app():
 	app = Flask(__name__)
+	app.register_blueprint(bp)
 
-	@app.get("/players")
-	def players():
-		return get_players()
+	@app.errorhandler(404)
+	def not_found(e):
+		return {
+			'message': 'Not found'
+		}, 404
 
-	@app.get("/clasification")
-	def clasification():
-	  return get_clasification()
+	@app.get('/')
+	def index():
+		return {
+			'message': 'Go to /api endpoint',
+			'endpoints': ['players', 'results', 'clasification', 'schedule']
+		}
 
-	@app.get("/results")
-	def results():
-		return get_results()
-
-	@app.get("/schedule")
-	def schedule():
-		return get_schedule()
+	Api(app)
 
 	return app

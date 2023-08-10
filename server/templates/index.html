@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <title>API Docs</title>
+  </head>
+  <body>
+    <main>
+      <img src="{{ url_for('static', filename='barca.svg') }}" alt="Barca Logo">
+      <h2>
+        API Docs
+      </h2>
+      <p>
+        Only accept request type GET
+      </p>
+      <div class="example">
+        <p class="example-title">
+          ⚽ Get all barca players in the current squad 2023-2024:
+          <strong>
+          /api/players
+          </strong>
+          returns a list of
+        </p>
+        <pre>
+			</pre>
+      </div>
+      <div class="example">
+        <p class="example-title">
+          🔵🔴 Get all results in the current season 2023-24
+          <strong>
+          /api/results
+          </strong>
+          returns a list of
+        </p>
+        <pre>
+			</pre>
+      </div>
+      <div class="example">
+        <p class="example-title">
+          📈 Get the current LaLiga clasification in the season 2023-2024
+          <strong>
+          /api/clasification
+          </strong>
+          returns a list of
+        </p>
+        <pre>
+			</pre>
+      </div>
+      <div class="example">
+        <p class="example-title">
+          📅 Get the all schedule of Barca in the season 2023-2024
+          <strong>
+          /api/schedule
+          </strong>
+          returns a list of
+        </p>
+        <pre>
+			</pre>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-json.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}" ></script>
+  </body>
+</html>

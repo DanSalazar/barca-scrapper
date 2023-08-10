@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Api
 from .api import bp
 
@@ -14,10 +14,7 @@ def create_app():
 
 	@app.get('/')
 	def index():
-		return {
-			'message': 'Go to /api endpoint',
-			'endpoints': ['players', 'results', 'clasification', 'schedule']
-		}
+		return render_template('index.html')
 
 	Api(app)
 
